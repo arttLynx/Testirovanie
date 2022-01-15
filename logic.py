@@ -1,4 +1,23 @@
-from questions import questions as __questions
+from questionsRUS import questions as __questionsRUS
+from sys import exit
+def init(number=1):
+    global __questions
+    if number == 1:
+        __questions = __questionsRUS
+    else:
+        print("This language does not supports. Wait some years please:)")
+        exit(1)
+
+# def locals(num):
+#     try:
+#         print("Select your localiation: \n 1) RUS // Русский \n 2) ENG // English \n")
+#         #a = int(input())
+#         if (num == 1):
+#             from questionsRUS import questions as __questions
+#     except ModuleNotFoundError:
+#         print("Fatal Error: Localization not found")
+#     except ValueError:
+#         print("Fatal Error: You entered not number")
 
 def checkAnswer(index, curQ):
     #q1
